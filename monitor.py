@@ -8,7 +8,7 @@ import getopt
 import italy
 import lithuania
 import who
-
+import usa
 
 
 def print_country(country):
@@ -18,6 +18,9 @@ def print_country(country):
         return
     elif country == 'Italy':
         italy.print_statistics()
+        return
+    elif country == 'United States':
+        usa.print_statistics()
         return
     else:
         who.print_country_statistics(country)
