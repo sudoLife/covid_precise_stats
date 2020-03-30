@@ -71,11 +71,7 @@ def print_total_statistics():
     data = json.loads(response.text)
 
 
-    try:
-        result = data['features'][0]['attributes']
-    except IndexError:
-        print("Sorry, we couldn't lookup {:s}. Is there a spelling error?".format(country))
-        sys.exit()
+    result = data['features'][0]['attributes']
     print("Total statistics:\nConfirmed cases: {:d}\nDeaths: {:d}\nCountries: {:d}".format(
         result['tot_conf'],
         result['tot_death'],
